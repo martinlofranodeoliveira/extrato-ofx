@@ -1,0 +1,181 @@
+{
+  "schemaVersion": 1,
+  "status": "ok",
+  "format": {
+    "dialect": "xml",
+    "version": "220",
+    "encoding": "utf-8"
+  },
+  "institution": {
+    "organization": "Cartão Fictício",
+    "id": "FICTICIO-002"
+  },
+  "signonStatus": {
+    "code": "0",
+    "severity": "INFO",
+    "message": null
+  },
+  "responses": [
+    {
+      "index": 0,
+      "kind": "credit_card",
+      "transactionId": "FIC-RESPOSTA-CARTAO-001",
+      "status": {
+        "code": "0",
+        "severity": "INFO",
+        "message": null
+      },
+      "statementIndex": 0
+    }
+  ],
+  "statements": [
+    {
+      "index": 0,
+      "responseIndex": 0,
+      "kind": "credit_card",
+      "currency": "BRL",
+      "account": {
+        "bankId": null,
+        "branchId": null,
+        "accountId": "CARTAO-FICTICIO-001",
+        "accountType": null,
+        "accountKey": null
+      },
+      "transactionsProvided": true,
+      "range": {
+        "start": {
+          "raw": "20261101",
+          "precision": "date",
+          "iso": "2026-11-01T00:00:00+00:00",
+          "utc": "2026-11-01T00:00:00Z",
+          "offsetHours": "0",
+          "zoneLabel": null
+        },
+        "end": {
+          "raw": "20261201",
+          "precision": "date",
+          "iso": "2026-12-01T00:00:00+00:00",
+          "utc": "2026-12-01T00:00:00Z",
+          "offsetHours": "0",
+          "zoneLabel": null
+        },
+        "endExclusive": true
+      },
+      "ledgerBalance": {
+        "amount": {
+          "raw": "-380.80",
+          "value": "-380.8"
+        },
+        "asOf": {
+          "raw": "20261106120000[0:GMT]",
+          "precision": "second",
+          "iso": "2026-11-06T12:00:00+00:00",
+          "utc": "2026-11-06T12:00:00Z",
+          "offsetHours": "0",
+          "zoneLabel": "GMT"
+        }
+      },
+      "availableBalance": {
+        "amount": {
+          "raw": "500.00",
+          "value": "500"
+        },
+        "asOf": {
+          "raw": "20261106120000[0:GMT]",
+          "precision": "second",
+          "iso": "2026-11-06T12:00:00+00:00",
+          "utc": "2026-11-06T12:00:00Z",
+          "offsetHours": "0",
+          "zoneLabel": "GMT"
+        }
+      },
+      "marketingInfo": null,
+      "transactions": [
+        {
+          "index": 0,
+          "type": "DEBIT",
+          "posted": {
+            "raw": "20261104060000.250[+2:EET]",
+            "precision": "millisecond",
+            "iso": "2026-11-04T06:00:00.250+02:00",
+            "utc": "2026-11-04T04:00:00.250Z",
+            "offsetHours": "2",
+            "zoneLabel": "EET"
+          },
+          "amount": {
+            "raw": "-89.90",
+            "value": "-89.9"
+          },
+          "fitId": "FIC-CARTAO-001",
+          "name": "Livraria fictícia",
+          "memo": "Compra de demonstração",
+          "userDate": null,
+          "availableDate": null,
+          "checkNumber": null,
+          "referenceNumber": null,
+          "serverId": null,
+          "sic": null,
+          "payeeId": null,
+          "correction": null
+        },
+        {
+          "index": 1,
+          "type": "CREDIT",
+          "posted": {
+            "raw": "20261105100000[0:GMT]",
+            "precision": "second",
+            "iso": "2026-11-05T10:00:00+00:00",
+            "utc": "2026-11-05T10:00:00Z",
+            "offsetHours": "0",
+            "zoneLabel": "GMT"
+          },
+          "amount": {
+            "raw": "10.10",
+            "value": "10.1"
+          },
+          "fitId": "FIC-CARTAO-002",
+          "name": "Crédito fictício",
+          "memo": null,
+          "userDate": null,
+          "availableDate": null,
+          "checkNumber": null,
+          "referenceNumber": null,
+          "serverId": null,
+          "sic": null,
+          "payeeId": null,
+          "correction": null
+        }
+      ],
+      "totals": {
+        "reportedCount": 2,
+        "reportedAmountSum": "-79.8"
+      }
+    }
+  ],
+  "coverage": {
+    "status": "complete",
+    "uninterpreted": [],
+    "ignoredTransportPaths": [
+      "/OFX/SIGNONMSGSRSV1[0]/SONRS[0]/DTSERVER[0]",
+      "/OFX/SIGNONMSGSRSV1[0]/SONRS[0]/LANGUAGE[0]"
+    ]
+  },
+  "diagnostics": [],
+  "stats": {
+    "nodes": 43,
+    "maxDepth": 7,
+    "textCharacters": 369,
+    "responseCount": 1,
+    "statementCount": 1,
+    "transactionCount": 2
+  },
+  "limits": {
+    "max_input_bytes": 8388608,
+    "max_nodes": 200000,
+    "max_depth": 64,
+    "max_statements": 50,
+    "max_transactions": 10000,
+    "max_text_chars": 4096,
+    "max_output_bytes": 16777216
+  }
+}

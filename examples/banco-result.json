@@ -1,0 +1,181 @@
+{
+  "schemaVersion": 1,
+  "status": "ok",
+  "format": {
+    "dialect": "sgml",
+    "version": "102",
+    "encoding": "cp1252"
+  },
+  "institution": {
+    "organization": "Banco Fictício Exemplo",
+    "id": "FICTICIO-001"
+  },
+  "signonStatus": {
+    "code": "0",
+    "severity": "INFO",
+    "message": null
+  },
+  "responses": [
+    {
+      "index": 0,
+      "kind": "bank",
+      "transactionId": "FIC-RESPOSTA-BANCO-001",
+      "status": {
+        "code": "0",
+        "severity": "INFO",
+        "message": null
+      },
+      "statementIndex": 0
+    }
+  ],
+  "statements": [
+    {
+      "index": 0,
+      "responseIndex": 0,
+      "kind": "bank",
+      "currency": "BRL",
+      "account": {
+        "bankId": "000000001",
+        "branchId": "0001",
+        "accountId": "CONTA-FICTICIA-001",
+        "accountType": "CHECKING",
+        "accountKey": null
+      },
+      "transactionsProvided": true,
+      "range": {
+        "start": {
+          "raw": "20261101",
+          "precision": "date",
+          "iso": "2026-11-01T00:00:00+00:00",
+          "utc": "2026-11-01T00:00:00Z",
+          "offsetHours": "0",
+          "zoneLabel": null
+        },
+        "end": {
+          "raw": "20261201",
+          "precision": "date",
+          "iso": "2026-12-01T00:00:00+00:00",
+          "utc": "2026-12-01T00:00:00Z",
+          "offsetHours": "0",
+          "zoneLabel": null
+        },
+        "endExclusive": true
+      },
+      "ledgerBalance": {
+        "amount": {
+          "raw": "2474.50",
+          "value": "2474.5"
+        },
+        "asOf": {
+          "raw": "20261105180000[-3:BRT]",
+          "precision": "second",
+          "iso": "2026-11-05T18:00:00-03:00",
+          "utc": "2026-11-05T21:00:00Z",
+          "offsetHours": "-3",
+          "zoneLabel": "BRT"
+        }
+      },
+      "availableBalance": {
+        "amount": {
+          "raw": "2400.25",
+          "value": "2400.25"
+        },
+        "asOf": {
+          "raw": "20261105180000[-3:BRT]",
+          "precision": "second",
+          "iso": "2026-11-05T18:00:00-03:00",
+          "utc": "2026-11-05T21:00:00Z",
+          "offsetHours": "-3",
+          "zoneLabel": "BRT"
+        }
+      },
+      "marketingInfo": null,
+      "transactions": [
+        {
+          "index": 0,
+          "type": "CREDIT",
+          "posted": {
+            "raw": "20261102093000.125[-3:BRT]",
+            "precision": "millisecond",
+            "iso": "2026-11-02T09:30:00.125-03:00",
+            "utc": "2026-11-02T12:30:00.125Z",
+            "offsetHours": "-3",
+            "zoneLabel": "BRT"
+          },
+          "amount": {
+            "raw": "+1500.25",
+            "value": "1500.25"
+          },
+          "fitId": "FIC-BANCO-001",
+          "name": "Depósito fictício",
+          "memo": "Exemplo sem vínculo bancário",
+          "userDate": null,
+          "availableDate": null,
+          "checkNumber": null,
+          "referenceNumber": null,
+          "serverId": null,
+          "sic": null,
+          "payeeId": null,
+          "correction": null
+        },
+        {
+          "index": 1,
+          "type": "DEBIT",
+          "posted": {
+            "raw": "20261103121500[-3:BRT]",
+            "precision": "second",
+            "iso": "2026-11-03T12:15:00-03:00",
+            "utc": "2026-11-03T15:15:00Z",
+            "offsetHours": "-3",
+            "zoneLabel": "BRT"
+          },
+          "amount": {
+            "raw": "-25,75",
+            "value": "-25.75"
+          },
+          "fitId": "FIC-BANCO-002",
+          "name": "Café de demonstração",
+          "memo": "Pagamento fictício",
+          "userDate": null,
+          "availableDate": null,
+          "checkNumber": null,
+          "referenceNumber": null,
+          "serverId": null,
+          "sic": null,
+          "payeeId": null,
+          "correction": null
+        }
+      ],
+      "totals": {
+        "reportedCount": 2,
+        "reportedAmountSum": "1474.5"
+      }
+    }
+  ],
+  "coverage": {
+    "status": "complete",
+    "uninterpreted": [],
+    "ignoredTransportPaths": [
+      "/OFX/SIGNONMSGSRSV1[0]/SONRS[0]/DTSERVER[0]",
+      "/OFX/SIGNONMSGSRSV1[0]/SONRS[0]/LANGUAGE[0]"
+    ]
+  },
+  "diagnostics": [],
+  "stats": {
+    "nodes": 47,
+    "maxDepth": 7,
+    "textCharacters": 436,
+    "responseCount": 1,
+    "statementCount": 1,
+    "transactionCount": 2
+  },
+  "limits": {
+    "max_input_bytes": 8388608,
+    "max_nodes": 200000,
+    "max_depth": 64,
+    "max_statements": 50,
+    "max_transactions": 10000,
+    "max_text_chars": 4096,
+    "max_output_bytes": 16777216
+  }
+}

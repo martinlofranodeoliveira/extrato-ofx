@@ -1,0 +1,10 @@
+from html import escape
+
+
+def fixture(*, name="Loja fictícia", memo="Compra de teste", extra="", amount="-3.20", fitid="TESTE-01", transaction_extra=""):
+    return ('''<?xml version="1.0" encoding="UTF-8"?>
+<?OFX OFXHEADER="200" VERSION="220" SECURITY="NONE" OLDFILEUID="NONE" NEWFILEUID="NONE"?>
+<OFX><BANKMSGSRSV1><STMTTRNRS><TRNUID>TESTE</TRNUID><STATUS><CODE>0</CODE><SEVERITY>INFO</SEVERITY></STATUS><STMTRS>
+<CURDEF>BRL</CURDEF><BANKACCTFROM><BANKID>000</BANKID><ACCTID>000123</ACCTID><ACCTTYPE>CHECKING</ACCTTYPE></BANKACCTFROM>
+<BANKTRANLIST><DTSTART>20240101</DTSTART><DTEND>20240201</DTEND><STMTTRN><TRNTYPE>DEBIT</TRNTYPE><DTPOSTED>20240102030000[-3:BRT]</DTPOSTED><TRNAMT>''' + escape(amount) + '''</TRNAMT><FITID>''' + escape(fitid) + '''</FITID><NAME>''' + escape(name) + '''</NAME><MEMO>''' + escape(memo) + '''</MEMO>''' + transaction_extra + '''</STMTTRN></BANKTRANLIST>
+<LEDGERBAL><BALAMT>96.8</BALAMT><DTASOF>20240201</DTASOF></LEDGERBAL>''' + extra + '''</STMTRS></STMTTRNRS></BANKMSGSRSV1></OFX>''').encode("utf-8")
