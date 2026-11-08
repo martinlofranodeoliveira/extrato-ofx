@@ -6,6 +6,8 @@ import subprocess
 
 def main():
     root = Path(__file__).resolve().parents[1]
+    actual_root = subprocess.check_output(["git", "rev-parse", "--show-toplevel"], cwd=root).decode().strip()
+    assert Path(actual_root).resolve() == root, "Execute este check em um clone Git deste projeto"
     files = subprocess.check_output(["git", "ls-files", "-z"], cwd=root).split(b"\0")
     count = 0
     forbidden = [r"/(?:home|Users)/[A-Za-z0-9_.-]+/", r"-----BEGIN [A-Z ]*PRIVATE KEY-----",
